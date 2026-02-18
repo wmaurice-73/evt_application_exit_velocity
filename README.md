@@ -16,12 +16,15 @@ The plots.py file produces all the figures appearing in the thesis outside of Ch
 To make use of the python files, clone the repository and open the project folder in your IDE.
 
 First, create a virtual environment
+
 python -m venv venv
 
 Then activate the environment using
+
 venv\Scripts\activate
 
 And lastly install all the required libraries
+
 pip install -r requirements.txt
 
 The pot_method.R file can be used without any further instructions. Just make sure you install the required libraries if necessary. The commands and the required libraries can be found within the file.
