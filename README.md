@@ -2,7 +2,7 @@
 This repo contains all the code that was used for my master thesis, where I apply extreme value theory to estimate to maximum Exit Velocity possibly achievable.
 
 The data folder contains the raw data taken from https://baseballsavant.mlb.com/, as well as the processed data. The processed data can be obtained using the process.py file from the data_processing folder.
-The raw data contains information about batters with at least one batted ball event per season, for each season from 2015 - 2025. 
+The raw data contains information about batters with at least one batted ball event per season for each season from 2015 - 2025. 
 
 The processed data only contains the best exit velocity each player has obtained within these years
 
