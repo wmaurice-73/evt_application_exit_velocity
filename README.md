@@ -7,7 +7,7 @@ The raw data contains information about batters with at least one batted ball ev
 The processed data only contains the best exit velocity each player has obtained within these years
 
 The pot_method.R file uses the processed data to estimate the right endpoint of the data using the peaks over threshold approach. We chose a threshold via a graphical procedure, using the empirical mean excess plot.
-Since the prebuilt R function MeanExcess only produces a discrete plot, one can use the mean_excess_plot.py file to generate the continuous plot appearing in the thesis.
+Since the prebuilt R function MeanExcess only produces a discrete plot, one can use the mean_excess_plot.py file to generate a continuous plot.
 
 The semi_parametric_method.py file  uses the processed data to estimate the right endpoint of the data using a semi-parametric approach. We use the moment estimator to estimate the shape parameter. The file also produces all the plots we used to choose ranges of k for our used estimators and to display our results.
 
