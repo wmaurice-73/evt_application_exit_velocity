@@ -1,30 +1,86 @@
-# evt_application_exit_velocity
-This repo contains all the code that was used for my master thesis, where I apply extreme value theory to estimate to maximum Exit Velocity possibly achievable.
+# EVT Application – Exit Velocity
 
-The data folder contains the raw data taken from https://baseballsavant.mlb.com/, as well as the processed data. The processed data can be obtained using the process.py file from the data_processing folder.
-The raw data contains information about batters with at least one batted ball event per season for each season from 2015 - 2025. 
+This repository contains all code used for my master's thesis, in which I apply Extreme Value Theory (EVT) to estimate the maximum exit velocity possibly achievable in baseball.
 
-The processed data only contains the best exit velocity each player has obtained within these years
+---
 
-The pot_method.R file uses the processed data to estimate the right endpoint of the data using the peaks over threshold approach. We chose a threshold via a graphical procedure, using the empirical mean excess plot.
-Since the prebuilt R function MeanExcess only produces a discrete plot, one can use the mean_excess_plot.py file to generate a continuous plot.
+## Data
 
-The semi_parametric_method.py file  uses the processed data to estimate the right endpoint of the data using a semi-parametric approach. We use the moment estimator to estimate the shape parameter. The file also produces all the plots we used to choose ranges of k for our used estimators and to display our results.
+The `data/` folder contains:
 
-The plots.py file produces all the figures appearing in the thesis outside of Chapter 6.
+- **Raw data**  
+  Downloaded from: https://baseballsavant.mlb.com/  
+  Includes all batters with at least one batted ball event per season  
+  Seasons covered: **2015–2025**
 
-To make use of the python files, clone the repository and open the project folder in your IDE.
+- **Processed data**  
+  Generated using:
+```
+  data_processing/process.py
+```
 
-First, create a virtual environment
+  The processed dataset contains only the **maximum exit velocity per player** over the observed time period.
 
+---
+
+## Methods
+
+### 1. Peaks Over Threshold (POT) Method
+
+- File: `pot_method.R`
+- Uses processed data
+- Estimates the right endpoint via the **Peaks Over Threshold (POT)** approach
+- Threshold selection via empirical **Mean Excess Plot**
+
+Since the built-in R function `MeanExcess()` produces only a discrete plot,
+the file
+```
+mean_excess_plot.py
+```
+
+can be used to generate a continuous version.
+
+---
+
+### 2. Semi-Parametric Method
+
+- File: `semi_parametric_method.py`
+- Uses the **moment estimator** for the shape parameter
+- Produces diagnostic plots:
+  - Selection of appropriate k values
+  - Final endpoint estimates
+
+---
+
+### 3. Additional Plots
+
+- File: `plots.py`
+- Generates all thesis figures outside of Chapter 6
+
+---
+
+## Installation & Setup (Python)
+
+Clone the repository and open the project folder in your IDE.
+
+### 1. Create a virtual environment
+```bash
 python -m venv venv
+```
 
-Then activate the environment using
+### 2. Activate the environment
 
-venv\Scripts\activate
+**Windows:**
+```bash
+venv/Scripts/activate
+```
 
-And lastly install all the required libraries
+**macOS/Linux:**
+```bash
+source venv/bin/activate
+```
 
+### 3. Install required packages
+```bash
 pip install -r requirements.txt
-
-The pot_method.R file can be used without any further instructions. Just make sure you install the required libraries if necessary. The commands and the required libraries can be found within the file.
+```
