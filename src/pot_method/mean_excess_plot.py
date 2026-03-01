@@ -23,7 +23,7 @@ plt.xticks(np.arange(110, 120, 1))
 # Set minor ticks (invisible markers) at 0.25 distance
 ax = plt.gca() # Get Current Axis
 ax.xaxis.set_minor_locator(MultipleLocator(0.25))
-# Turn on the grid for the x-axis, applying it to 'both' major and minor ticks
+# Turn on the grid for the x-axis
 plt.grid(axis='x', which='both', linestyle='-', alpha=0.5)
 plt.grid(True)
 plt.show()
@@ -48,3 +48,4 @@ plt.tick_params(axis='both', labelsize=7)
 #uncomment the next line if you want to save the plot
 #plt.savefig("./src/pot_method/meanexcess_plot.pdf", bbox_inches="tight")
 plt.show()
+
