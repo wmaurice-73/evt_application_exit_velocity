@@ -28,7 +28,7 @@ plt.grid(axis='x', which='both', linestyle='-', alpha=0.5)
 plt.grid(True)
 plt.show()
 
-#we want to compare the if our choice of u supports the GPD model, hence we add a linear function y_linear = a*u + b to the plot
+#we want to compare if our choice of u supports the GPD model, hence we add a linear function y_linear = a*u + b to the plot
 #y_linear schould have slope gamma(1-gamma), b has to be adjusted such that the line intersects the mean excess plot at the desired choice of u
 a = -0.244  
 b = 29.9
@@ -48,4 +48,5 @@ plt.tick_params(axis='both', labelsize=7)
 #uncomment the next line if you want to save the plot
 #plt.savefig("./src/pot_method/meanexcess_plot.pdf", bbox_inches="tight")
 plt.show()
+
 
