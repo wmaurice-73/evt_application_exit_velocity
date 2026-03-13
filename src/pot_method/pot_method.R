@@ -19,7 +19,7 @@ library(POT)
 
 df <- read.csv2(
   #change the file path according to where you store EV_combined_R.csv
-  "../../data/processed/ev_combined_R.csv",
+  "data/processed/ev_combined_R.csv",
   header = TRUE,
   stringsAsFactors = FALSE
 )
@@ -76,5 +76,6 @@ print(paste("The endpoint estimate is given by: ",endpoint))
 #upper 95% confidence bound of the endpoint
 ci_e = endpoint + 1.96*se
 print(paste("The upper 0.95 confidence bound for the endpoint is given by: ",ci_e))
+
 
 
