@@ -9,7 +9,7 @@ This repository contains all code used for my master's thesis, in which I apply 
 The `data/` folder contains:
 
 - **Raw data**  
-  Downloaded from: https://baseballsavant.mlb.com/  
+  Downloaded from: https://baseballsavant.mlb.com/leaderboard/statcast  
   Includes all batters with at least one batted ball event per season  
   Seasons covered: **2015–2025**
 
