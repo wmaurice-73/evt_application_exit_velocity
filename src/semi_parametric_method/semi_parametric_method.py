@@ -6,7 +6,7 @@ import seaborn as sns
 
 # This file is the implementation of the semi - parametric procedure
 #we begin by defining all the relevant functions
-#the actual calculations start in from line 185
+#the actual calculations start in from 185
 
 
 # this function calculates the moment estimator for a given k with data df
@@ -76,7 +76,7 @@ def var_ee_fixed_parameters(gamma: float, scale: float):
 
 
 # calculates the endpoint estimator for fixed gamma but scale and location still depening on k
-def endpoint_estimator_fixed_gamma(k: int, gamma: int, df: pd.DataFrame):
+def endpoint_estimator_fixed_gamma(k: int, gamma: float, df: pd.DataFrame):
     return location_estimator(k, df) - (scale_estimator(k, df) / gamma)
 
 
@@ -125,7 +125,7 @@ def me_plot_ce(
 
 # print the endpoint_estimator for k being in between kmin% and kmax% of the sample size but using fixed gamma
 def ee_plot_fixed_gamma(
-    kmin: float, kmax: float, gamma: int, df: pd.DataFrame, ylim: tuple | None = None
+    kmin: float, kmax: float, gamma: float, df: pd.DataFrame, ylim: tuple | None = None
 ):
     x = np.arange(int(math.ceil(kmin * len(df))), int(kmax * math.ceil(len(df))), 1)
     plt.figure()
@@ -144,7 +144,7 @@ def ee_plot_fixed_gamma(
 def ee_plot_fixed_gamma_ce(
     kmin: float,
     kmax: float,
-    gamma: int,
+    gamma: float,
     medianendpoint: float,
     df: pd.DataFrame,
     ylim: tuple | None = None,
@@ -252,3 +252,4 @@ print(
     "The upper 0.95 confidence bound using the moment estimator is given by: "
     + str(upperbound_2)
 )  # 129.73990555645753
+
