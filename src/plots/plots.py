@@ -37,7 +37,7 @@ for xi, v in zip(x, values):
                 label,
                 ha="right", va="center")
 
-#mae axes and texts look clean
+#make axes and texts look clean
 for xi, v in zip(x, values):
     ax.text(xi, v + 0.15, f"$X_{{{xi}}}$", ha="center", va="bottom")
 
@@ -134,4 +134,5 @@ plt.grid(True)
 plt.tight_layout()
 #uncomment the next line if you want to save the plot
 #plt.savefig("./src/plots/densitites_gpd.pdf", bbox_inches="tight")
+
 plt.show()
