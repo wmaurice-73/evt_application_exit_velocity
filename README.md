@@ -38,7 +38,7 @@ the file
 mean_excess_plot.py
 ```
 
-can be used to generate a continuous version.
+can be used to generate a continuous version. Also produces diagnostic plots.
 
 ---
 
@@ -46,7 +46,7 @@ can be used to generate a continuous version.
 
 - File: `semi_parametric_method.py`
 - Uses the **moment estimator** for the shape parameter
-- Produces diagnostic plots:
+- Produces plots:
   - Selection of appropriate k values
   - Final endpoint estimates
 
